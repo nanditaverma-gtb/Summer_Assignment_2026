@@ -1,1 +1,98 @@
+//Q5- WAP TO FIND SUM OF DIGITS OF A NUMBER.
+#include<iostream>
+using namespace std;
+int sumDig(int n){
+    int result = 0;
+    while (n > 0){
+    result = result + n % 10;
+    n = n / 10;
+}
+cout << "THE SUM OF DIGITS OF NUMBER IS - "<<result<<endl;
+    return 0;
+}
+int main(){
+    sumDig(45637);
+    return 0;
+}
 
+
+
+//Q6- write a program to reverse a number.
+#include<iostream>
+using namespace std;
+
+int revNum(int n){
+    int res = 0;
+   while(n > 0){
+    int lastDig = n % 10;
+    res = res * 10 + lastDig;
+    n = n / 10;
+   }
+   cout << "the reverse of the number is- " << res << endl;
+return 0;
+}
+
+int main(){
+    revNum(6748);
+    return 0;
+}
+
+
+
+
+//Q7- WAP TO FIND PRODUCT OF DIGITS OF A NUMBER-
+#include<iostream>
+using namespace std;
+
+int proDig(int n){
+    int product = 1;
+    int digit;
+    while(n > 0){
+        digit = n % 10;
+       product = product * digit;
+        n = n / 10;
+    }
+    cout << "THE PRODUCT OF DIGITS OF NUMBER IS- " << product << endl;
+    return 0;
+}
+
+int main(){
+    proDig(45067);
+    return 0;
+}
+
+/* CONCEPT USED- firstly, we will take all values greater than zero. Then we will find the digits of number by dividing or finding modulo by 10. 
+then we will multiply it.*/
+
+
+
+
+//Q8- WAP TO CHECK IF A NUMBER IS PALINDROME OR NOT-
+#include<iostream>
+using namespace std;
+
+int reverse (int n){
+    int res = 0;
+    while (n > 0){
+        int lastDig = n % 10;
+        res = res * 10 + lastDig;
+        n = n / 10;
+    }
+return res;
+}
+    
+bool isPalin(int num){
+    int revNum = reverse(567765);
+    return num == revNum;
+}
+
+int main(){
+    int n = 567765;
+    if(isPalin(n)){
+        cout << "PALINDROME";
+    } else {
+        cout << "NOT PALINDROME";
+    }
+    cout << endl;
+    return 0;
+}
