@@ -1,1 +1,58 @@
+//QUES-1-CALCULATE THE SUM OF FIRST N NATURAL NUMBERS.
+#include <iostream>
+using namespace std;
 
+int main(){
+    int n;
+    cout<<"Enter the nth term: ";
+    cin>> n;
+    cout<<"The sum of first n natural number is: "<<(n*(n+1)/2) <<endl;
+    return 0;
+}
+
+
+
+//QUES-2-WRITE A PROGRAM TO PRINT THE MULTIPLICATION TABLE OF A GIVEN NUMBER.
+#include <iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"Enter the number to find its table:";
+    cin>>n;
+    cout<<"The multiplication table of n is: "<<endl;
+    for(int i=1; i<=10; i++){
+        cout<<n<<" * "<<i<<" = "<<n*i<<endl;
+    }
+    return 0;
+}
+
+
+
+//Q3- WAP TO FIND THE FACTORIAL OF A NUMBER-
+#include<iostream>
+using namespace std;
+int main(){
+int fact= 1;
+int n;
+cout<<"ENTRE THE VALUE OF N- ";
+cin >> n;
+for(int i=1; i<=n; i++){
+    fact = fact * i; 
+}
+cout<<"THE FACTORIAL OF " << n <<" = "<<fact <<endl;
+return 0;
+}
+
+
+
+//Q4- WAP TO COUNT DIGITS OF A NUMBER-
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"ENTER THE VALUE OF N = ";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        
+    }
+}       
