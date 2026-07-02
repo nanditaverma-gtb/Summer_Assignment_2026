@@ -1,1 +1,82 @@
+//WAP TO PRINT HALF PYRAMID PATTERN.
+#include<iostream>
+using namespace std;
+int main(){
+    int rows;
+    cout << "Enter the number of rows: ";
+    cin >> rows;
+    for(int i = 1; i <= rows; ++i) {
+        for(int j = 1; j <= i; ++j) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
 
+
+
+
+
+
+
+//WAP TO PRINT NUMBER TRIANGLE.
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout << "Enter the number of rows: ";
+    cin >> n;
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= i; j++){
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+//WAP TO PRINT CHARACTER TRIANGLE.
+#include<iostream>
+using namespace std;
+int main() {
+    int rows;
+    cout << "Enter the number of rows: ";
+    cin >> rows;
+    for(int i = 1; i <= rows; ++i) {   
+            
+        for(int j = 1; j <= i; ++j) {
+                cout << char(64 + j) << " "; // Print characters starting from 'A'
+            }
+            cout << endl;
+    }
+    return 0;       
+}
+
+
+
+
+
+
+
+//WAP TO PRINT REPEATED NUMBER PATTER.
+#include<iostream>
+using namespace std;
+int main(){
+    int n;  
+    cout << "Enter the number of rows: ";
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            cout << i << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}   
