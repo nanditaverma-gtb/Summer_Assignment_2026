@@ -1,1 +1,102 @@
+//WAP TO RECURSIVE FACTORIAL.
+#include<iostream>
+using namespace std;
+int factorial(int n) {
+    if(n == 0 || n == 1)                 // Base case: factorial of 0 or 1 is 1
+        return 1;
+    else
+        return n * factorial(n - 1);   // Recursive case: n! = n * (n-1)!
+}
+int main() {
+    int number; 
+    cout << "Enter a number: ";
+    cin >> number; 
+    if(number < 0) {
+        cout << "Factorial is not defined for negative numbers." << endl; 
+    } else {    
+        int result = factorial(number); 
+        cout << "Factorial of " << number << " is: " << result << endl; 
+    }
+    return 0; 
+}
 
+
+
+
+
+
+
+//WAP TO RECURSIVE FIBONACCI
+#include<iostream>
+using namespace std;
+int fibonacci(int n)
+{
+    if(n<=1)
+        return n;
+    else    
+        return fibonacci(n-1)+fibonacci(n-2);
+}
+int main()
+{
+    int n;
+    cout<<"Enter the number of terms: ";
+    cin>>n;
+    cout<<"Fibonacci Series: ";
+    for(int i=0;i<n;i++)
+    {
+        cout<<fibonacci(i)<<" ";
+    }       
+       return 0;
+}  
+
+
+
+
+
+
+
+//WAP TO RECURSIVE SUM OF DIGITS
+#include<iostream>
+using namespace std;
+int sumOfDigits(int n) {
+    if(n == 0) // Base case: if the number is 0, the sum of its digits is 0
+        return 0;
+    else
+        return (n % 10) + sumOfDigits(n / 10); 
+}
+int main() {
+    int number;
+    cout << "Enter a number: ";
+    cin >> number; 
+    if(number < 0) {    
+        cout << "Sum of digits is not defined for negative numbers." << endl; 
+    } else {
+        int result = sumOfDigits(number); 
+        cout << "Sum of digits of " << number << " is: " << result << endl; 
+    }
+    return 0; // Indicate successful completion of the program                  
+}
+
+
+
+
+
+
+
+//WAP TO RECURSIVE REVERSE OF A NUMBER.
+#include<iostream>
+using namespace std;
+int reverse(int n, int rev = 0) {
+    if (n == 0)
+        return rev;
+    rev = rev * 10 + n % 10;
+    return reverse(n / 10, rev);
+}
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    int reversedNum = reverse(num);
+    cout << "Reversed number: " << reversedNum << endl;
+    return 0;
+}
