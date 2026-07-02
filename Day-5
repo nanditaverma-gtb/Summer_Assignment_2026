@@ -1,1 +1,120 @@
+//WAP TO CHECK PERFECT NUMBER-
+#include<iostream>
+using namespace std;
+int main() {
+    int n, sum = 0;
+    cout << "ENTER THE VALUE OF N = ";
+    cin >> n;  
+    // Calculate the sum of proper divisors
+    for (int i = 1; i <= n / 2; i++) {
+        if (n % i == 0) {
+            sum += i;
+        }
+    }       
 
+    // Check if the number is perfect
+    if (sum == n) {
+        cout << n << " is a perfect number." << endl;           
+    } else {
+        cout << n << " is not a perfect number." << endl;   
+    }       
+    return 0;       
+}
+
+
+
+
+
+
+
+
+//WAP TO CHECK ARMSTRONG NUMBER 
+#include<iostream>
+using namespace std;
+int fact(int n)
+{
+    int f=1;
+    for(int i=1;i<=n;i++)
+    {
+        f=f*i;
+    }
+    return f;
+}
+int main()
+{       
+
+    int n,sum=0,temp,r;
+    cout<<"Enter a number: ";
+    cin>>n;
+    temp=n;
+    while(n>0)
+    {
+        r=n%10;
+        sum=sum+fact(r);
+        n=n/10;
+    }
+    if(sum==temp)
+    {
+        cout<<temp<<" is a armstrong number";
+    }
+    else
+    {
+        cout<<temp<<" is not a armstrong number";
+    }
+}       
+
+
+
+
+
+
+
+//WAP TO PRINT FACTORS OF A NUMBER-
+#include<iostream>
+using namespace std;
+int main() {
+    int n;
+    cout << "ENTER THE VALUE OF N = ";
+    cin >> n;
+    cout << "Factors of " << n << " are: ";
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+    return 0;       
+  }
+
+
+
+
+
+
+
+//WAP TO PRINT LARGEST PRIME FACTORS-
+#include<iostream>
+using namespace std;
+int main() {
+    int n, largestPrime = -1;
+    cout << "ENTER THE VALUE OF N = ";
+    cin >> n;
+    // Check for the number of 2s that divide n
+    while (n % 2 == 0) {
+        largestPrime = 2;
+        n /= 2;
+    }
+    // n must be odd at this point, so we can skip even numbers
+    for (int i = 3; i <= sqrt(n); i += 2) {
+        while (n % i == 0) {
+            largestPrime = i;
+            n /= i;
+        }
+    }
+    // This condition is to check if n is a prime number greater than 2
+    if (n > 2) {
+        largestPrime = n;
+    }
+    cout << "Largest prime factor is: " << largestPrime << endl;
+    return 0;       
+}
