@@ -17,6 +17,12 @@ int main(){
 
 
 
+
+
+
+
+
+
 //Q6- write a program to reverse a number.
 #include<iostream>
 using namespace std;
@@ -36,6 +42,11 @@ int main(){
     revNum(6748);
     return 0;
 }
+
+
+
+
+
 
 
 
@@ -63,6 +74,11 @@ int main(){
 
 /* CONCEPT USED- firstly, we will take all values greater than zero. Then we will find the digits of number by dividing or finding modulo by 10. 
 then we will multiply it.*/
+
+
+
+
+
 
 
 
