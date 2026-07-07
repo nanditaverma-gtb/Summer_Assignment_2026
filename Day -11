@@ -1,1 +1,104 @@
+//Q41- WAP TO WRITE FUNCTION TO FIND SUM OF TWO NUMBERS.
+#include<iostream>
+using namespace std;
+int sum(int a, int b){
+    return a+b;
+}
+int main(){
+    int a,b;        
+    cout<<"ENTER THE VALUE OF A- ";
+    cin>>a;
+    cout<<"ENTER THE VALUE OF B- ";
+    cin>>b;
+    cout<<"SUM OF A AND B IS- "<<sum(a,b)<<endl;
+    return 0;
+}
 
+
+
+
+
+
+
+//Q42- WAP TO WRITE FUNCTION TO FIND MAXIMUM.
+#include<iostream>
+using namespace std;
+int maximum(int a, int b) {
+    if(a > b)
+        return a;
+    else
+        return b;
+}
+int main() {
+    int num1, num2;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+    int max = maximum(num1, num2);
+    cout << "Maximum number is: " << max << endl;
+    return 0;
+}   
+
+
+
+
+
+
+
+//Q43- WAP TO WRITE FUNCTION TO CHECK PRIME.
+#include<iostream>
+using namespace std;
+bool isPrime(int n){
+    if(n<=1){
+        return false;
+    }
+    for(int i=2;i*i<=n;i++){
+        if(n%i==0){
+            return false;
+        }
+    }       
+return true;
+}
+int main(){
+    int n;
+    cout<<"ENTER THE VALUE OF N- ";
+    cin>>n;
+    if(isPrime(n)){ 
+        cout<<n<<" IS A PRIME NUMBER."<<endl;
+    }
+    else{
+        cout<<n<<" IS NOT A PRIME NUMBER."<<endl;
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+//Q44- WAP TO WRITE FUNCTION TO FIND FACTORIAL.
+#include<iostream>
+using namespace std;
+int factorial(int n) {
+    if(n < 0) {
+        cout << "Factorial is not defined for negative numbers." << endl;
+        return -1; // Return -1 to indicate an error
+    }
+    int fact = 1;
+    for(int i = 1; i <= n; i++) {   
+        fact *= i;
+    }
+    return fact;
+}
+int main() {
+    int n;
+    cout << "ENTER THE VALUE OF N- ";
+    cin >> n;
+    int result = factorial(n);
+    if(result != -1) { // Check if the result is valid
+        cout << "FACTORIAL OF " << n << " IS- " << result <<
+    endl;
+    }
+    return 0;
+}
